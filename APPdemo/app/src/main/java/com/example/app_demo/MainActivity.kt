@@ -3,6 +3,7 @@ package com.example.app_demo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
+import androidx.fragment.app.Fragment
 import com.example.app_demo.fragments.HomeFragment
 import com.example.app_demo.fragments.NewCompetenceFragment
 import com.example.app_demo.repositories.CompetenceRepository
@@ -23,7 +24,7 @@ class MainActivity : AppCompatActivity() {
                     return@setOnItemSelectedListener true
                 }
                 R.id.new_competence -> {
-                    loadFragment(NewCompetenceFragment(this), R.string.new_comp_page_title)
+                    loadFragment(NewCompetenceFragment(this), R.string.new_comp_title)
                     return@setOnItemSelectedListener true
                 }
                 else -> false
@@ -33,7 +34,8 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun loadFragment(homeFragment: HomeFragment, homePageTitle: Int) {
+    fun loadFragment(homeFragment: Fragment
+                     , homePageTitle: Int) {
         val pagetitleView = findViewById<TextView>(R.id.page_title)
         pagetitleView.text = resources.getString(homePageTitle)
         CompetenceRepository.updateAll {

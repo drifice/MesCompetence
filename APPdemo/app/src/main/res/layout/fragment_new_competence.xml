@@ -9,7 +9,7 @@
         android:id="@+id/name_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/new_comp_page_name_placeholder"
+        android:hint="@string/new_comp_form_name_placeholder"
         android:paddingTop="@dimen/default_margin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,7 +19,7 @@
         android:id="@+id/tags_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/new_comp_page_tags_placeholder"
+        android:hint="@string/new_comp_form_tags_placeholder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/name_input" />
@@ -28,7 +28,7 @@
         android:id="@+id/description_input"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/new_comp_page_description_placeholder"
+        android:hint="@string/new_comp_form_description_placeholder"
         app:layout_constraintTop_toBottomOf="@+id/tags_input" />
 
     <Button
